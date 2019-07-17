@@ -1,3 +1,6 @@
+# Frozen-String-Literal: true
+# Encoding: utf-8
+
 require 'spec_helper'
 
 describe SimpleEnum::Multiple::CollectionProxy do

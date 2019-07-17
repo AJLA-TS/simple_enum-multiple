@@ -1,3 +1,7 @@
+# Frozen-String-Literal: true
+# rubocop:disable Style/ParallelAssignment
+# Encoding: utf-8
+
 module ActiveRecordSupport
   def self.connection
     @connection_pool ||= ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: ':memory:'

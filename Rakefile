@@ -1,5 +1,7 @@
-require "bundler/gem_tasks"
+# Frozen-String-Literal: true
+# Encoding: utf-8
 
+require 'bundler/gem_tasks'
 desc 'Default: run all unit tests for both ActiveRecord & Mongoid.'
 task :default => :spec
 

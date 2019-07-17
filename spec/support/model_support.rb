@@ -1,3 +1,6 @@
+# Frozen-String-Literal: true
+# Encoding: utf-8
+
 require 'active_record'
 require 'mongoid'
 

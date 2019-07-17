@@ -1,3 +1,7 @@
+# Frozen-String-Literal: true
+# rubocop:disable Lint/RescueWithoutErrorClass
+# Encoding: utf-8
+
 require 'mongoid'
 
 module MongoidSupport

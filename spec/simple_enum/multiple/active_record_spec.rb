@@ -1,3 +1,7 @@
+# Frozen-String-Literal: true
+# rubocop:disable Layout/AlignHash
+# Encoding: utf-8
+
 require 'spec_helper'
 
 describe SimpleEnum::Multiple::Accessors::MultipleAccessor, active_record: true do

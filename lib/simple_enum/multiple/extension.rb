@@ -1,3 +1,6 @@
+# Frozen-String-Literal: true
+# Encoding: utf-8
+
 module SimpleEnum
   module Multiple
     module Extension

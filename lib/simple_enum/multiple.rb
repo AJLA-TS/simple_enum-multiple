@@ -1,3 +1,6 @@
+# Frozen-String-Literal: true
+# Encoding: utf-8
+
 require 'simple_enum/multiple/accessors'
 require 'simple_enum/multiple/collection_proxy'
 require 'simple_enum/multiple/extension'

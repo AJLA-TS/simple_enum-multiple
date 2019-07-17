@@ -1,3 +1,6 @@
+# Frozen-String-Literal: true
+# Encoding: utf-8
+
 module I18nSupport
   def self.included(base)
     base.let!(:i18n_previous_backend) { I18n.backend }
