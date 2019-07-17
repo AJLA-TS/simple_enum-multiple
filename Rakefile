@@ -2,17 +2,10 @@
 # Encoding: utf-8
 
 require 'bundler/gem_tasks'
-desc 'Default: run all unit tests for both ActiveRecord & Mongoid.'
+desc 'Default: run all unit tests for both ActiveRecord'
 task :default => :spec
 
 desc 'Run rspec test suite'
 task :spec do
   sh 'bundle exec rspec spec/'
-end
-
-# Mongodb
-directory "tmp/mongodb.data"
-desc 'Run mongodb in tmp/'
-task :mongodb => [:'tmp/mongodb.data'] do |t|
-  system "mongod", "--dbpath", "tmp/mongodb.data"
 end

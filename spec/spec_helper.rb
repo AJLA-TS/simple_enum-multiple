@@ -1,6 +1,5 @@
 require 'bundler/setup'
 require 'active_record'
-require 'mongoid'
 require 'rspec'
 
 if ENV['CODECLIMATE_REPO_TOKEN']
@@ -10,15 +9,13 @@ end
 
 require 'simple_enum'
 require 'simple_enum/multiple'
+require 'support/i18n_translation_support'
 require 'support/active_record_support'
-require 'support/i18n_support'
 require 'support/model_support'
-require 'support/mongoid_support'
 
 I18n.enforce_available_locales = false
 RSpec.configure do |config|
-  config.include I18nSupport, i18n: true
+  config.include I18nTranslationSupport, i18n: true
   config.include ActiveRecordSupport, active_record: true
-  config.include MongoidSupport, mongoid: true
   config.include ModelSupport
 end

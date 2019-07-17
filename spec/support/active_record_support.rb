@@ -4,12 +4,19 @@
 
 module ActiveRecordSupport
   def self.connection
-    @connection_pool ||= ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: ':memory:'
+    a, d = 'sqlite3', ':memory:'
+    @connection_pool ||=
+      ActiveRecord::Base.establish_connection(
+        adapter: a, database: d
+      )
+
     ActiveRecord::Base.connection
   end
 
   def self.included(base)
-    base.before(:each) { self.reset_active_record }
+    base.before do
+      reset_active_record
+    end
   end
 
   def reset_active_record
@@ -20,10 +27,8 @@ module ActiveRecordSupport
       t.column :bitwise_cds, :integer
       t.column :text_cds, :text
     end
-    ActiveRecordSupport.connection.create_join_table :dummies, :favorites, force: true
   end
 end
 
-# Behave like the railtie.rb
 ActiveRecord::Base.send :extend, SimpleEnum::Attribute
 ActiveRecord::Base.send :extend, SimpleEnum::Translation
