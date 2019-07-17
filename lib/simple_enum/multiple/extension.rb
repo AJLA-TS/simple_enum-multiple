@@ -1,8 +1,11 @@
+# Frozen-String-Literal: true
+# Encoding: utf-8
+
 module SimpleEnum
   module Multiple
     module Extension
-      def generate_enum_multiple_extension_for enum, accessor
-        accessor.init(self) if accessor.respond_to? :init
+      def generate_enum_multiple_extension_for(_enum, accessor)
+        accessor.init(self) if accessor.respond_to?(:init)
       end
     end
   end
