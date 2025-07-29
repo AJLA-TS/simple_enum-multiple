@@ -10,7 +10,7 @@ module SimpleEnum
       def init(klass)
         source = self.source
         klass.class_eval do
-          serialize source, SimpleEnum::Multiple::BitwiseCoder
+          serialize source, coder: SimpleEnum::Multiple::BitwiseCoder
         end
       end
 
